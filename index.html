@@ -1,323 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <marquee>WELCOME TO HARBIDEX EXCHANGE YOUR NUMBER ONE MOST RELIABLE VENDOR FOR YOUR INTERNATIONAL PAYMENT</marquee>
-  <title>Harbidex Exchange — One Account. Many Currencies.</title>
-  <meta name="description" content="Harbidex Exchange - fast, secure currency & crypto payments for Nigerian businesses. Open free account or chat on WhatsApp." />
-
+  <meta charset="UTF-8">
+  <marquee>WELCOME TO HARBIDEX EXCHANGE YOUR NUMBER ONE VENDOR FOR ALL FOREIGN</marquee>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media - Harbidex Exchange</title>
   <style>
-    /* ========= Reset & base ========= */
-    :root{
-      --green-700:#1b5e20;
-      --green-500:#2e7d32;
-      --green-300:#a5d6a7;
-      --muted:#6b6b6b;
-      --bg:#80ada6;
-      --card:#b0c085;
-      --shadow: 0 6px 20px rgba(15,22,12,0.08);
-      --glass: rgba(156, 225, 233, 0.6);
-      --max-width:1200px;
-      --radius:12px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      -webkit-font-smoothing:antialiased;
-      background:var(--bg);
-      color:#0b2d16;
-      line-height:1.45;
-      -webkit-tap-highlight-color: transparent;
-    }
-    a { color: inherit; text-decoration: none; }
-    img { max-width:100%; display:block; }
-
-    /* ========= NAV ========= */
-    header{
-      position:sticky; top:0; z-index:60;
-      backdrop-filter: blur(6px);
-      background: linear-gradient(180deg, rgba(11,45,22,0.06), rgba(11,45,22,0.02));
-      border-bottom:1px solid rgba(16,41,18,0.06);
-    }
-    .nav {
-      max-width:var(--max-width); margin:0 auto; display:flex; align-items:center; gap:1rem;
-      padding:14px 20px; justify-content:space-between;
-    }
-    .brand {display:flex; align-items:center; gap:.75rem;}
-    .brand .logo {
-      width:42px; height:42px; border-radius:9px; background:linear-gradient(135deg,var(--green-500),var(--green-300));
-      display:flex; align-items:center; justify-content:center; color:white; font-weight:700; font-size:18px;
-      box-shadow: 0 6px 18px rgba(46,125,50,0.12);
-    }
-    .brand h1{font-size:1rem; margin:0; font-weight:700;}
-    nav .links {display:flex; gap:18px; align-items:center;}
-    nav a.link {color:#083012; font-weight:600; font-size:.94rem; padding:8px 10px; border-radius:8px;}
-    nav a.link:hover {color:var(--green-700); background:rgba(34,139,34,0.05)}
-
-    .cta { display:flex; gap:10px; align-items:center; }
-    .btn-primary{
-      background:var(--green-700); color:white; padding:10px 16px; border-radius:999px; font-weight:700; box-shadow: 0 6px 20px rgba(27,94,32,0.12);
-    }
-    .btn-outline{
-      padding:8px 12px; border-radius:999px; border:1px solid rgba(27,94,32,0.12); color:var(--green-700); font-weight:600;
-      background:transparent;
-    }
-
-    /* hamburger */
-    .hamburger{display:none; width:44px;height:44px; align-items:center; justify-content:center; border-radius:9px;}
-    .hamburger button{background:transparent;border:0;padding:8px;cursor:pointer;color:var(--green-700);}
-
-    /* ========= HERO (IMAGE BG) ========= */
-    .hero {
-      position:relative; min-height:78vh; display:flex; align-items:center; justify-content:center; overflow:hidden;
-      color:white; text-align:center;
-      /* changed to use image background IMG.jpeg */
-      background: url("IMG.jpeg") no-repeat center center/cover;
-    }
-    .hero .overlay {
-      position:absolute; inset:0; background:linear-gradient(180deg, rgba(11,45,22,0.35), rgba(11,45,22,0.55)); z-index:1;
-    }
-    .hero-inner{
-      max-width:1100px; padding:60px 20px; display:grid; gap:18px;
-      align-items:center; z-index:2; /* ensure content above overlay */
-    }
-    .eyebrow {display:inline-block; padding:8px 12px; background:rgba(255,255,255,0.06); border-radius:999px; font-weight:600; color:var(--green-300); font-size:.86rem;}
-    .headline{font-size:clamp(1.6rem, 3.8vw, 2.8rem); font-weight:800; line-height:1.02; margin-top:6px;}
-    .sub {color:rgba(255,255,255,0.92); font-size:1.05rem; margin-top:8px; color:rgba(255,255,255,0.9);}
-    .hero-ctas { margin-top:18px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;}
-    .hero-stats { margin-top:28px; display:flex; gap:18px; justify-content:center; flex-wrap:wrap;}
-    .stat { background:rgba(255,255,255,0.06); padding:10px 14px; border-radius:10px; min-width:140px; font-weight:700; font-size:.95rem; }
-
-    /* ========= MAIN ========= */
-    main { max-width:var(--max-width); margin:36px auto; padding:0 20px 80px; }
-
-    /* services cards */
-    .services {
-      display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:16px;
-      margin-top:6px;
-    }
-    .card{
-      background:var(--card); padding:18px; border-radius:var(--radius);
-      box-shadow:var(--shadow); border:1px solid rgba(6,30,14,0.03);
-      display:flex; gap:12px; align-items:flex-start;
-    }
-    .card .icon{
-      width:56px;height:56px;border-radius:10px;background:linear-gradient(180deg,var(--green-300),#e7f6e7);
-      display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--green-700);
-      flex:0 0 56px;
-    }
-    .card h3{margin:0;font-size:1.05rem}
-    .card p{margin:6px 0 0;color:var(--muted); font-size:.95rem}
-
-    /* Trust / stats */
-    .trust { margin-top:34px; display:grid; grid-template-columns:1fr 320px; gap:18px; align-items:center; }
-    .trust .trust-cards {display:grid; gap:12px;}
-    .pill { display:inline-block; background:var(--card); padding:8px 10px; border-radius:999px; font-weight:700; color:var(--green-700); border:1px solid rgba(16,45,16,0.04); }
-
-    /* Testimonials */
-    .testimonials { margin-top:28px; display:flex; gap:12px; overflow:auto; padding-bottom:8px;}
-    .testimonial{ min-width:260px; background:var(--card); padding:16px; border-radius:12px; box-shadow: var(--shadow);}
-    .testimonial p{ color:var(--muted); }
-
-    /* features / use cases */
-    .features { margin-top:42px; display:grid; grid-template-columns:1fr 1fr; gap:18px; align-items:center; }
-    .feature-list{ display:grid; gap:12px; }
-    .feature-item{ display:flex; gap:12px; align-items:flex-start; }
-    .feature-item svg{flex:0 0 40px}
-
-    /* CTA strip */
-    .cta-strip { margin-top:44px; background:linear-gradient(90deg,var(--green-500),var(--green-300)); color:white; padding:26px; border-radius:14px; display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
-    .cta-strip h3{margin:0; font-size:1.1rem}
-    .cta-strip .cta-actions { display:flex; gap:10px; }
-
-    /* Footer */
-    footer.site{ background:#06220c; color:rgba(255,255,255,0.9); padding:40px 20px; margin-top:48px;}
-    .footer-grid { max-width:var(--max-width); margin:0 auto; display:grid; grid-template-columns: 1fr 1fr 220px; gap:18px; align-items:start; }
-    .socials a{ display:inline-flex; align-items:center; justify-content:center; width:40px;height:40px;border-radius:8px;background:rgba(255,255,255,0.06); color:white; margin-right:8px; }
-
-    /* responsive */
-    @media (max-width: 900px){
-      .trust{ grid-template-columns: 1fr; }
-      .features{ grid-template-columns:1fr; }
-      .footer-grid{ grid-template-columns: 1fr; }
-    }
-    @media (max-width: 720px){
-      .nav .links { display:none; }
-      .hamburger{display:flex;}
-      .hero-inner{padding:40px 16px}
-      header .nav{padding:10px 14px}
-      .hero .headline{font-size:clamp(1.4rem, 6vw, 2.2rem)}
-    }
-
-    /* small helpers */
-    .muted { color:var(--muted); }
-    .center { text-align:center; }
+    body {margin:0;font-family:Arial, sans-serif;background:#f8f9f8;color:#222;}
+    header, footer {background:#2e7d32;color:white;text-align:center;padding:20px;}
+    nav {background:#1b5e20;display:flex;justify-content:center;gap:20px;padding:10px;}
+    nav a {color:white;text-decoration:none;font-weight:bold;transition:0.3s;}
+    nav a:hover {color:#a5d6a7;}
+    section {padding:40px;text-align:center;}
+    h2 {color:#1b5e20;}
+    video, iframe {max-width:100%;border-radius:10px;box-shadow:0 3px 6px rgba(0,0,0,0.2);}
+    .media-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;margin-top:30px;}
   </style>
 </head>
 <body>
-
-  <!-- Header / Nav -->
   <header>
-    <div class="nav" role="navigation" aria-label="Main navigation">
-      <div class="brand">
-        <div class="logo" aria-hidden="true">H</div>
-        <div>
-          <h1 style="font-size:.95rem;margin:0">Harbidex Exchange</h1>
-          <div style="font-size:.78rem;color:var(--muted)">Secure payments & currency solutions</div>
-        </div>
-      </div>
-
-      <div class="links" id="nav-links">
-        <a class="link" href="#home" target="_blank">Home</a>
-        <a class="link" href="#services" target="_blank">Services</a>
-        <a class="link" href="#use-cases" target="_blank">Use Cases</a>
-        <a class="link" href="#customers" target="_blank">Customers</a>
-        <a class="link" href="#media" target="_blank">Media</a>
-        <a class="link" href="#contact" target="_blank">Contact</a>
-      </div>
-
-      <div class="cta">
-        <a class="btn-outline" href="about.html">About</a>
-        <a class="btn-primary" href="https://wa.link/dwji8i" target="_blank" rel="noopener">Chat on WhatsApp</a>
-        <div class="hamburger" id="hamb">
-          <button aria-label="Toggle menu" id="hambBtn">☰</button>
-        </div>
-      </div>
-    </div>
+    <h1>Our Media</h1>
+    <p>Explore our videos and social highlights</p>
   </header>
 
-  <!-- HERO -->
-  <section class="hero" id="home" aria-label="Hero">
-    <!-- replaced video with background image IMG.jpeg -->
-    <div class="overlay" aria-hidden="true"></div>
+  <nav>
+    <a href="index.html" target="_blank">Home</a>
+    <a href="about.html" target="_blank">About</a>
+    <a href="services.html" target="_blank">Services</a>
+    <a href="customers.html" target="_blank">Customers</a>
+    <a href="reviews.html" target="_blank">Reviews</a>
+    <a href="media.html" target="_blank">Media</a>
+    <a href="contact.html" target="_blank">Contact</a>
+  </nav>
 
-    <div class="hero-inner center">
-      <span class="eyebrow">Trusted by Nigerian businesses</span>
-      <h2 class="headline">Helping Millions of Freelancers/Working Guys to Receive Payment Across All Borders without Being hold and Exchange To Local Currency.</h2>
-      <p class="sub">Contact Us To Collect A Receiving Account like (CAD, USD, EUR, GBP, AUD)To receive payment without Stress And ALL PAYMENT ARE SUBJECT TO DROP PAYMENT RECEIPT FOR CONFORMATION PURPOSES</p>
+  <section>
+    <h2>Intro Video</h2>
+    <video controls>
+      <source src="BID.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <img src="" alt="">
 
-      <div class="hero-ctas">
-        <a class="btn-primary" href="https://wa.link/dwji8i" target="_blank" rel="noopener">Collect Receiving Account</a>
-        <a class="btn-outline" href="#services">Explore Services</a>
-      </div>
+    <h2>Social Media Highlights</h2>
+    <div class="media-grid">
+      <!-- Example TikTok Embed -->
+      <iframe src="https://www.tiktok.com/embed/7284166787077879045" height="500"></iframe>
 
-      <div class="hero-stats" aria-hidden="true">
-        <div class="stat">20+ currencies supported</div>
-        <div class="stat">Fast payouts to Nigeria</div>
-        <div class="stat">Regulated & secure</div>
-      </div>
+      <!-- Example YouTube Embed -->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ScMzIvxBSi4" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
     </div>
   </section>
 
-  <!-- MAIN -->
-  <main>
-
-    <!-- SERVICES -->
-    <section id="services" aria-labelledby="services-heading">
-      <h2 style="margin:0 0 12px">Services</h2>
-      <p class="muted" style="margin-bottom:18px">We help Businesses,Freelancers,And Working Guys to receive, convert and move funds to NGN CURRENCY @ IRate.</p>
-      <div class="services" role="list">
-        <article class="card" role="listitem">
-          <div class="icon">FX</div>
-          <div>
-            <h3>Competitive FX Rates</h3>
-            <p>Convert between major currencies with transparent Exchange Rates.</p>
-          </div>
-        </article>
-
-        <article class="card" role="listitem">
-          <div class="icon">ACC</div>
-          <div>
-            <h3>Multi-currency Accounts</h3>
-            <p>Hold balances in USD, EUR, GBP and more. Receive payments as Swift as possible to your local bank accounts After Exchanging Funds.</p>
-          </div>
-        </article>
-
-        <article class="card" role="listitem">
-          <div class="icon">P2P</div>
-          <div>
-            <h3>Local Payouts</h3>
-            <p>Quick transfers to Nigerian banks.</p>
-          </div>
-        </article>
-
-        <article class="card" role="listitem">
-          <div class="icon">API</div>
-          <div>
-            <h3>Marketplace Integrations & API</h3>
-            <p>Automate reconciliations, integrate with marketplaces, and scale with our API.</p>
-          </div>
-        </article>
-
-        <article class="card" role="listitem">
-          <div class="icon">SEC</div>
-          <div>
-            <h3>Compliance & Security</h3>
-            <p>KYC, AML and robust security practices to protect your funds and data.</p>
-          </div>
-        </article>
-
-        <article class="card" role="listitem">
-          <div class="icon">SUP</div>
-          <div>
-            <h3>24/7 Support</h3>
-            <p>Dedicated support via WhatsApp and email to guide large and small transactions.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- TRUST & STATS -->
-    <section class="trust" aria-labelledby="trust-heading" style="margin-top:34px;">
-      <div class="trust-cards">
-        <div style="background:var(--card); padding:18px; border-radius:12px; box-shadow:var(--shadow);">
-          <div style="display:flex;gap:12px; align-items:center;">
-            <div style="width:58px;height:58px;border-radius:10px;background:linear-gradient(135deg,var(--green-300),#e7f6e7); display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--green-700)">★</div>
-            <div>
-              <div style="font-weight:800;">Trusted by exporters & marketplaces</div>
-              <div class="muted" style="font-size:.95rem;margin-top:6px;">Trusted by hundreds of businesses across Africa for Receiving cross-border payments.</div>
-            </div>
-          </div>
-
-          <div style="display:flex; gap:10px; margin-top:14px; flex-wrap:wrap;">
-            <div class="pill">Sharp Rate</div>
-            <div class="pill">Low fees</div>
-            <div class="pill">Fast payouts</div>
-          </div>
-
-          <div style="margin-top:12px;">
-            <small class="muted">We work with international partners and follow global compliance standards.</small>
-          </div>
-        </div>
-
-        <div style="background:linear-gradient(180deg,#fff,#f7fff7); padding:18px; border-radius:12px; box-shadow:var(--shadow);">
-          <div style="font-weight:800; font-size:1.2rem;">Quick Quote</div>
-          <p class="muted" style="margin:8px 0 12px">Get an indicative rate — no signup required.</p>
-
-          <!-- simple inline quote mock -->
-          <div style="display:flex; gap:8px; align-items:center;">
-            <input aria-label="amount" type="number" placeholder="Amount" style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(6,30,14,0.06)">
-            <select aria-label="currency" style="padding:10px;border-radius:8px;border:1px solid rgba(6,30,14,0.06)">
-              <option>USD → NGN</option>
-              <option>EUR → NGN</option>
-            </select>
-          </div>
-          <div style="margin-top:10px; display:flex; gap:8px;">
-            <button class="btn-primary" style="flex:1">Get Rate</button>
-            <a class="btn-outline" href="#contact" style="display:inline-flex; align-items:center; padding:10px 12px; border-radius:8px">Contact</a>
-          </div>
-        </div>
-      </div>
-
-      <div style="padding:18px;">
-        <div style="background:var(--card); padding:16px; border-radius:12px; text-align:center; box-shadow:var(--shadow);">
-          <div style="font-size:1.1rem; font-weight:800">Global reach</div>
-          <div style="font-size:2.2rem; font-weight:900; margin-top:8px">20+</div>
-          <div class="muted">Supported currencies</div>
-
-          <hr style="opacity:.06; margin:14px 0">
-          <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap;">
-            <small class="muted">Over 200 countries • 1M+ transactions
+  <footer>
+    <p>&copy; 2025 Harbidex Exchange</p>
+  </footer>
+</body>
+</html>
